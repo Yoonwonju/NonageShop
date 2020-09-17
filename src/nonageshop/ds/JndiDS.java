@@ -30,6 +30,5 @@ public class JndiDS {
 		}
 		return null;
 	}
-	
 }
 
