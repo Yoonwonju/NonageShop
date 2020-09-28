@@ -49,7 +49,7 @@ public void init(ServletConfig config) throws ServletException {
          }
       
 }
-//	/boardlist.do = " ~ "	<~ prop  헤2ㅛㅐㅕ0128
+//	/boardlist.do = " ~ "	<~ prop  
 
 //		key			value
 //	handlerMap 에는 key : /boardList.do

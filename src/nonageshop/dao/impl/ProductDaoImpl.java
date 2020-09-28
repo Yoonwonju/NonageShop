@@ -43,7 +43,7 @@ public class ProductDaoImpl implements ProductDao {
 			if(rs.next()) {
 				ArrayList<Product> list = new ArrayList<Product>();
 				do {
-					list.add(getListProduct(rs));
+					list.add(getNewListProduct(rs));
 				}while(rs.next());
 				return list;
 			}
@@ -53,7 +53,7 @@ public class ProductDaoImpl implements ProductDao {
 		return null;
 	}
 
-	private Product getListProduct(ResultSet rs) throws SQLException {
+	private Product getNewListProduct(ResultSet rs) throws SQLException {
 		int no = rs.getInt("NO"); // 상품 번호
 		String name = rs.getString("NAME"); // 상품명
 		int salePrice = rs.getInt("SALEPRICE"); // 판매가
@@ -76,7 +76,7 @@ public class ProductDaoImpl implements ProductDao {
 			if(rs.next()) {
 				ArrayList<Product> list = new ArrayList<Product>();
 				do {
-					list.add(getListProduct(rs));
+					list.add(getNewListProduct(rs));
 				}while(rs.next());
 				return list;
 			}
@@ -124,7 +124,7 @@ public class ProductDaoImpl implements ProductDao {
 	}
 
 	private Product getProduct(ResultSet rs) throws SQLException {
-		Product pdt = getListProduct(rs);
+		Product pdt = getNewListProduct(rs);
 		pdt.setKind(rs.getString("KIND"));
 		pdt.setPrice(rs.getInt("PRICE"));
 		pdt.setMargin(rs.getInt("MARGIN"));

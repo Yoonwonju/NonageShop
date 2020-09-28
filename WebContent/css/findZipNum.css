@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+body {
+	background-color: #B96DB5;
+	font-family: Verdana;
+}
+
+#popup {
+	padding: 0 10px;
+}
+
+#popup h1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 45px;
+	color: #CCC;
+	font-weight: normal;
+}
+
+table#zipcode {
+	border-collapse: collapse; /* border 사이의 간격 없앰 */
+	border-top: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	width: 100%;
+	margin-top: 15px;
+}
+
+table#zipcode th, table#zipcode td {
+	text-align: center;
+	border-bottom: 1px dotted #fff;
+	color: #FFF;
+}
+
+table th, td {
+	padding: 10px;
+}
+
+table#zipcode  a {
+	display: block;
+	height: 20px;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+}
+
+table#zipcode a:hover {
+	color: #F90;
+	font-weight: bold;
+}

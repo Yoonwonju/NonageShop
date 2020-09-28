@@ -35,6 +35,4 @@ public class ProductService {
 		public ArrayList<Product> kindProduct(String kind){
 			return dao.listKindProduct(kind);
 		};
-	
-	
 }

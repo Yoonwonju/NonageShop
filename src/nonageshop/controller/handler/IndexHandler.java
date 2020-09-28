@@ -2,10 +2,13 @@ package nonageshop.controller.handler;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.junit.Assert;
 
 import nonageshop.controller.Command;
 import nonageshop.dto.Product;
@@ -22,17 +25,18 @@ public class IndexHandler implements Command {
     @Override
     public String process(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        if (request.getMethod().equalsIgnoreCase("get")) {
             ArrayList<Product> newProductList = service.newProducts();
             ArrayList<Product> bestProductList = service.bestProducts();
+           
+//			Assert.assertNotNull(newProductList);
+//			newProductList.stream().forEach(System.out::println);
+//			Assert.assertNotNull(bestProductList);
+//			bestProductList.stream().forEach(System.out::println);
             
             request.setAttribute("newProductList", newProductList);
             request.setAttribute("bestProductList", bestProductList);
 
             return "index.jsp";
-        }else {
-            return null;
-        }
     }
 
 }
